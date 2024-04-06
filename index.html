@@ -1,0 +1,403 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>What is .NET Core: A Quick Overview</title>
+    <meta name="description" content="Discover the essence of .NET Core – a powerful, cross-platform development framework. Uncover its key features and learn why it's crucial for modern software development." />
+    <meta name="keywords" content="What is .NET Core, dotnet core, .net core, dot net core" />
+
+	<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+	<!--<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">-->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+	<style>
+		.accordion-item:first-child:before { content:"1"; }
+.sky_sec .accordion-item:nth-child(2):before { content:"2"; }
+
+.sky_sec .accordion-item:nth-child(3):before , #rt .accordion-item:first-child:before  { content:"3"; }
+/* .sky_sec .accordion-item:nth-child(4):before , #rt .accordion-item:nth-child(2):before  { content:"4"; } */
+.sky_sec .accordion-item:nth-child(4):before , #rt .accordion-item:last-child:before  { content:"4"; }
+	</style>
+</head>
+<body>
+<!--
+:::::Header Section
+-->
+<!-- <div class="nav-bar11"> -->
+    <header class="position-fixed w-100 inner_banner " id="header">
+        <div class="container position-relative ">
+            <nav class="navbar navbar-expand-lg navbar-dark w-100 ">
+                  <div class="container  position-relative justify-content-md-end justify-content-sm-between align-items-sm-center">
+                    <a class="navbar-brand my-auto" href="index.html">
+                        <div class="d-md-none d-block">
+                            <img src="images/logo1.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="navbar-brand-img d-md-block d-none">
+                            <img src="images/logo.png" class="img-fluid" alt="">
+                        </div>
+                    </a>
+                      <button class="navbar-toggler toggle transition" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                      </button>
+                    <div class="collapse navbar-collapse flex-md-column" id="navbarCollapse">
+                        <ul class="navbar-nav ms-auto navbar-light">
+                              <li class="nav-item">
+                                <a class="nav-link" href="#">Home</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link active" href="index.html">ASP.NET Core</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link " href="blazor.html">Blazor</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="">React</a>
+                            </li>
+                              
+                              <li class="nav-item">
+                                  <a class="nav-link" href="angular.html">Angular</a>
+                            </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="vue.html">Vue</a>
+                              </li>	
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contact</a>
+                              </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+    
+            <div class="login transition position-absolute">
+                <a href="index.html" class="btn border-0 transition btn-primary createSite">Create Free Site</a>
+            </div>
+            
+        </div>
+    </header>
+<!-- </div> -->
+
+<div class="sidebar_area blazor_page">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-3">
+				<div class="left_nav">
+					<ul>
+						<li><a class="active" href="blazor.html"> <i class="bi bi-layout-text-window-reverse"></i>what-is-dot-net-core</a></li>
+					</ul>
+				</div>
+			
+			</div>
+			<div class="col-lg-9 srt">
+				<div class="pb-4">
+					<h1>What is .NET Core: A Quick Overview</h1>
+                    <h1>What is .NET Core?</h1>
+					<div class="clearfix">
+						<img src="images/ang-1.png" class="img-fluid" alt="">
+						<p>.NET Core is an open-source, cross-platform general-purpose development platform designed to be lightweight, modular, and versatile.(<a href="https://github.com/dotnet" target="_blank">GitHub</a>)</p>
+                        <p>.NET Core was first announced by Microsoft in 2014 as a redesigned, open-source, and cross-platform successor to .NET Framework. The first version,</p>
+                        <p>.NET Core 1.0, was released in 2016. Major versions since then include .NET Core 2.0 in 2017, .NET Core 3.0 in 2019, and in 2020 it was released as .NET (omitted the word “Core”) with version .NET 5. Current version is .NET 7 and the upcoming .NET 8 is scheduled to be released in November 2023.</p>
+                        <p>The goal of .NET Core was to create a .NET platform optimized for modern cloud workloads. By re-implementing .NET Runtime and Framework as open source, Microsoft aimed to make .NET cross-platform and open for contribution from the developer community.</p>
+                        <p>The <a href="https://dotnetfoundation.org/" target="_blank">.NET Foundation</a>, established by Microsoft on March 31, 2014, aims to enhance open-source development and foster collaboration within the .NET ecosystem.
+
+                        </p>
+
+
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		
+	
+		
+		
+		<div class="row">
+		<div class="col-md-4 col-sm-12 col-g-4 ">
+		  <div class="blazor_box ">
+		    <img src="images/ang-2.jpg"/>
+			<h3>What is .NET Core used for:</h3>
+            <ul class="list-img">
+                <li class="">Web apps: .NET Core is a great choice for building web applications, using ASP.NET Core.</li>
+                <li class="">Web APIs: For building RESTful services.</li>
+                <li class="">Microservices: .NET Core is a great choice for building microservices, which are small, independent services that can be used to create larger distributed systems.</li>
+                <li class="">Console apps: Utility apps and command-line tools. .NET Core can be used to build console applications, which are command-line applications that can be run from the command prompt.</li>
+                <li class="">Desktop apps: Using WinUI (for Windows only) and .NET MAUI (cross-platform) we can build stunning desktop applications.</li>
+                <li class="">Mobile apps: .NET Core can be used to build mobile applications using Xamarin and MAUI, which allows developers to share code with iOS, Android, and Windows platforms.</li>
+                <li class="">Machine learning: Using the ML.NET framework, we can build and train custom machine learning models.</li>
+                <li class="">Cloud-native apps: Taking advantage of containers and orchestrators like Kubernetes.</li>
+                <li class="">IoT apps: Running on small-footprint devices like Raspberry Pi. .NET Core can be used to build IoT applications, including applications that run on embedded devices and sensors.</li>
+                <li class="">Games: We can also use .NET Core to build games using the Unity game engine.</li>
+            </ul>
+		  </div>
+		</div>
+		<div class="col-md-4 col-sm-12">
+		   <div class="blazor_box">
+		    <img src="images/ang-3.jpg"/>
+			<h3>What is .NET Core vs .NET Framework?</h3>
+            
+            <p class="all-p">.NET Core and .NET Framework are both development platforms from Microsoft, but they differ in several key aspects. While .NET Core is cross-platform and runs on Windows, Linux, and macOS, .NET Framework is limited to Windows. In terms of accessibility, .NET Core is open source, allowing developers to contribute and inspect its codebase, but the .NET Framework remains proprietary.</p>
+            <p class="all-p">.NET Core boasts enhanced startup times and optimized resource utilization, particularly suited for cloud-based applications. Additionally, not all APIs from the .NET Framework are available in .NET Core, though Microsoft is progressively porting them over.</p>
+            <p class="all-p">.NET Core apps benefit from a modular approach using NuGet packages, often resulting in smaller application footprints, while .NET Framework applications depend on a system-wide installer (can also use NuGet for additional features). In essence, .NET Core represents a forward-thinking evolution from .NET Framework, crafted with modern application architectures in mind, such as cloud computing and microservices, whereas .NET Framework remains vital for legacy Windows-only applications.</p>
+		  </div>
+		</div>
+		<div class="col-md-4 col-sm-12">
+			<div class="blazor_box">
+		    <img src="images/ang-6.png"/>
+			<h3>What is Dapper in .NET Core?</h3>
+            <p class="all-p">Dapper (a micro ORM) is a popular open-source library for .NET that simplifies the process of working with databases. It was created by Sam Saffron (a senior software engineer at Stack Overflow) in 2011.</p>
+                    <p class="all-p">Dapper allows developers to write database queries using a simple, SQL-like syntax, and it provides a way to execute those queries against various databases, including SQL Server, MySQL, PostgreSQL, and Oracle.</p>
+                    <p class="all-p">It is available as a NuGet package. Dapper is often used in .NET Core applications to simplify data access and reduce the amount of code required to interact with databases.</p>
+		 </div>
+		</div>
+	  </div>
+		
+		
+	</div>
+</div>
+
+<div class="code_area blazor_code">
+	<div class="container">
+		<h2>What is Dependency Injection in .NET Core?</h2>
+        <p> Dependency injection is a technique that allows components to be loosely coupled, making it easier to test, maintain, and extend the system. Instead of having classes create their own dependencies or directly reference them, the dependencies are "injected" into the classes that require them.</p> 
+        <p>In .NET Core, dependency injection is built into the framework, making it easy to use and integrate into applications.</p>
+        <h2>What is IoC container in .NET Core?</h2>
+        <p>An IoC (Inversion of Control) Container in .NET Core is a component used for dependency injection. It manages object creation and resolves dependencies automatically. When an application is started, dependencies are registered with the container. During runtime, the container provides instances of these dependencies when requested. This promotes loose coupling, making code more modular and testable. .NET Core includes a built-in IOC container but can also integrate with third-party containers.</p>
+        <p>In .NET Core, Microsoft's default IoC container is available through the IServiceProvider interface. It is lightweight, fast, and supports common scenarios.</p>
+        <p>For more complex scenarios, third-party containers like Autofac can be used by implementing the same interface.</p>
+        <h2>What is Kestrel in .NET Core?</h2>
+        <p>Kestrel is a web server for .NET Core, designed to be fast, efficient, and secure. It is a drop-in replacement for the traditional IIS web server and can be used to host web applications, APIs, and microservices. It is optimized for high performance and is Cross-platform, open-source available on <a href="https://github.com/dotnet/aspnetcore/tree/main/src/Servers/Kestrel" target="_blank">GitHub</a>.</p>
+		<p>Kestrel supports all the latest web features like WebSocket support which can be used to build real-time web apps with ASP.NET Core and .NET Core.</p>
+       
+		<!-- ********************** -->
+		
+       
+
+
+		<div class="mt-3 pt-3 clearfix">
+			<h1>Summary</h1>
+			<img src="images/ang-8.png" class="img-fluid" alt="">
+            <p>.NET Core is a versatile framework that we can use to build wide range of applications. It provides a number of benefits over the traditional .NET Framework, including better performance, cross-platform compatibility, and a more modular design.</p>
+            <p>Developers can use Dapper to simplify data access, dependency injection to loosely couple components, and the built-in IoC container to manage dependencies. Kestrel is a fast and efficient web server that is used to host web applications and APIs.</p>
+            <p>.NET Core is a popular choice for building modern web applications and microservices and is well-suited for building scalable, high-performance applications that can run on a variety of platforms.</p>
+		</div>
+		
+		
+	</div>
+</div>
+
+<!--
+:::::accordian Section
+-->
+<div id="inj" class="acc_area pb-5 blazor_faq">
+	<div class="container">		
+<h1 class="ang-faq">Frequently Asked Questions about What is .NET Core</h1>
+		<div class="row gx-5">
+			<div class="col-lg-6 sky_sec">
+				
+				<div class="accordion pt-0" id="accordionExample">
+				  <div class="accordion-item">
+					<h2 class="accordion-header" id="headingOn">
+					  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne1" aria-expanded="true" aria-controls="collapseOne">
+						How to tell what version of .NET Core is installed?
+					  </button>
+					</h2>
+					<div id="collapseOne1" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+					  <div class="accordion-body">
+						Run “dotnet --version” in the command line.
+                    					  </div>
+					</div>
+				  </div>
+				  <div class="accordion-item">
+					<h2 class="accordion-header" id="headingTwo35">
+					  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo35" aria-expanded="false" aria-controls="collapseTwo35">
+                        What is automapper in .NET Core?					  </button>
+					</h2>
+					<div id="collapseTwo35" class="accordion-collapse collapse" aria-labelledby="headingTwo35" data-bs-parent="#accordionExample">
+					  <div class="accordion-body">
+						AutoMapper is a library to map objects from one type to another, simplifying object-to-object mapping.				  </div>
+					</div>
+				  </div>
+                  
+				
+				  
+				   
+	
+					</div>
+			</div>
+
+			<div id="rt" class="col-lg-6 sky_sec">
+				  
+				<div class="accordion pt-0" id="accordionExample1">
+				  <div class="accordion-item">
+					<h2 class="accordion-header" id="headingOne1">
+					  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneone" aria-expanded="true" aria-controls="collapseOne1">
+						What is ilogger in .NET Core?
+					  </button>
+					</h2>
+					<div id="collapseOneone" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample1">
+					  <div class="accordion-body">
+						ILogger is an interface for logging messages in .NET Core, offering a consistent way to log throughout your application.					  </div>
+					</div>
+				  </div>
+				  <div class="accordion-item">
+					<h2 class="accordion-header" id="headingTwo1">
+					  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo1" aria-expanded="false" aria-controls="collapseTwo1">
+						What is .NET Core CLI?					  </button>
+					</h2>
+					<div id="collapseTwo1" class="accordion-collapse collapse" aria-labelledby="headingTwo1" data-bs-parent="#accordionExample1">
+					  <div class="accordion-body">
+						.NET Core CLI is a set of tools for developing, building, and running .NET Core applications from the command line.				  </div>
+					</div>
+				  </div>
+				  
+				  
+				 
+				
+
+				
+					</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<div id="inj" class="acc_area pb-5 blazor_faq">
+	<div class="container">		
+<h1 class="ang-faq">People also ask about What is .NET Core</h1>
+		<div class="row gx-5">
+			<div class="col-lg-6 sky_sec">
+				
+				<div class="accordion pt-0" id="accordionExample">
+				  <div class="accordion-item">
+					<h2 class="accordion-header" id="headingOnes2">
+					  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOnes2" aria-expanded="false" aria-controls="collapseOnes2">
+						What is .NET Core runtime?
+					  </button>
+					</h2>
+					<div id="collapseOnes2" class="accordion-collapse collapse " aria-labelledby="headingOnes2" data-bs-parent="#accordionExample">
+					  <div class="accordion-body">
+						.NET Core Runtime is the environment where .NET Core applications are executed. It includes just the resources needed to run existing apps.					  </div>
+					</div>
+				  </div>
+				  <div class="accordion-item">
+					<h2 class="accordion-header" id="headingTwos2">
+					  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwos2" aria-expanded="false" aria-controls="collapseTwos2">
+                        What is .NET Core SDK?
+					  </button>
+					</h2>
+					<div id="collapseTwos2" class="accordion-collapse collapse" aria-labelledby="headingTwos2" data-bs-parent="#accordionExample">
+					  <div class="accordion-body">
+						.NET Core SDK (Software Development Kit) includes everything needed to develop .NET Core applications, including the runtime, libraries, and CLI tools.					  </div>
+					</div>
+				  </div>
+
+				   
+	
+					</div>
+			</div>
+
+			<div id="rt" class="col-lg-6 sky_sec">
+				  
+				<div class="accordion pt-0" id="accordionExample1">
+				  <div class="accordion-item">
+					<h2 class="accordion-header" id="headingOne1s2">
+					  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneones2" aria-expanded="true" aria-controls="collapseOne1s2">
+						What is middleware .NET Core?
+					  </button>
+					</h2>
+					<div id="collapseOneones2" class="accordion-collapse collapse" aria-labelledby="headingOnes2" data-bs-parent="#accordionExample1">
+					  <div class="accordion-body">
+						Middleware in .NET Core are components that handle requests and responses, forming a pipeline between the server and application.					  </div>
+					</div>
+				  </div>
+				  <div class="accordion-item">
+					<h2 class="accordion-header" id="headingTwo1s2">
+					  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo1s2" aria-expanded="false" aria-controls="collapseTwo1s2">
+						What is SignalR .NET Core?					  </button>
+					</h2>
+					<div id="collapseTwo1s2" class="accordion-collapse collapse" aria-labelledby="headingTwo1s2" data-bs-parent="#accordionExample1">
+					  <div class="accordion-body">
+						SignalR in .NET Core is a library that enables real-time web functionality, allowing server-side code to push content to clients instantly.					  </div>
+					</div>
+				  </div>
+				  <!-- <div class="accordion-item">
+					<h2 class="accordion-header" id="headingTwo22">
+					  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo22" aria-expanded="false" aria-controls="collapseTwo22">
+						Is Angular better than React?					  </button>
+					</h2>
+					<div id="collapseTwo22" class="accordion-collapse collapse" aria-labelledby="headingTwo22" data-bs-parent="#accordionExample1">
+					  <div class="accordion-body">
+						The choice between Angular and React depends on the project's requirements and developer preferences. Both have strengths, and the better choice varies based on the specific context.					  </div>
+					</div>
+				  </div> -->
+				  
+				 
+				
+
+				
+					</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<footer>
+	<div class="container">
+		<div><a href="#"><img src="images/f-logo.png" class="img-fluid" alt=""></a></div>
+		<div class="pt-4 mt-4">
+			<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="about-us.html">About Us</a></li>
+			<li><a href="#">Privacy</a></li>
+			<li><a href="#">Terms of Use</a></li>
+			<li><a href="#">Contact </a></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="copy">&copy; 2023 ASPNETCore.net</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script src="script.js"></script>
+<script>
+        $(function () { 
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 20) { 
+                    $('.navbar-brand-img img').attr('src','images/logo1.png');
+                }
+                if ($(this).scrollTop() < 20) { 
+                    $('.navbar-brand-img img').attr('src','images/logo.png');
+                }
+            })
+        });
+    </script>
+<script>
+$("#more1").click(function(){
+    $("#more1").hide();
+});
+$("#more2").click(function(){
+    $("#more2").hide();
+});
+$("#more3").click(function(){
+    $("#more3").hide();
+});
+</script>
+</body>
+</html>
