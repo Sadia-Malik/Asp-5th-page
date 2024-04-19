@@ -4,348 +4,663 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>What is .NET Core: A Quick Overview</title>
-    <meta name="description" content="Discover the essence of .NET Core – a powerful, cross-platform development framework. Uncover its key features and learn why it's crucial for modern software development." />
-    <meta name="keywords" content="What is .NET Core, dotnet core, .net core, dot net core" />
-
+	<title>ASP NET</title>
 	<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
 	<!--<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">-->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+	<link rel="stylesheet" type="text/css" href="styl.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-	<style>
-		.accordion-item:first-child:before { content:"1"; }
-.sky_sec .accordion-item:nth-child(2):before { content:"2"; }
-
-.sky_sec .accordion-item:nth-child(3):before , #rt .accordion-item:first-child:before  { content:"3"; }
-/* .sky_sec .accordion-item:nth-child(4):before , #rt .accordion-item:nth-child(2):before  { content:"4"; } */
-.sky_sec .accordion-item:nth-child(4):before , #rt .accordion-item:last-child:before  { content:"4"; }
-	</style>
 </head>
 <body>
 <!--
 :::::Header Section
 -->
-<!-- <div class="nav-bar11"> -->
-    <header class="position-fixed w-100 inner_banner " id="header">
-        <div class="container position-relative ">
-            <nav class="navbar navbar-expand-lg navbar-dark w-100 ">
-                  <div class="container  position-relative justify-content-md-end justify-content-sm-between align-items-sm-center">
-                    <a class="navbar-brand my-auto" href="index.html">
-                        <div class="d-md-none d-block">
-                            <img src="images/logo1.png" class="img-fluid" alt="">
-                        </div>
-                        <div class="navbar-brand-img d-md-block d-none">
-                            <img src="images/logo.png" class="img-fluid" alt="">
-                        </div>
-                    </a>
-                      <button class="navbar-toggler toggle transition" type="button" data-toggle="collapse" data-target="#navbarCollapse">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                      </button>
-                    <div class="collapse navbar-collapse flex-md-column" id="navbarCollapse">
-                        <ul class="navbar-nav ms-auto navbar-light">
-                              <li class="nav-item">
-                                <a class="nav-link" href="#">Home</a>
-                              </li>
-                              <li class="nav-item">
-                                <a class="nav-link active" href="index.html">ASP.NET Core</a>
-                              </li>
-                              <li class="nav-item">
-                                <a class="nav-link " href="blazor.html">Blazor</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link " href="">React</a>
-                            </li>
-                              
-                              <li class="nav-item">
-                                  <a class="nav-link" href="angular.html">Angular</a>
-                            </li>
-                              <li class="nav-item">
-                                <a class="nav-link" href="vue.html">Vue</a>
-                              </li>	
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Contact</a>
-                              </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-    
-            <div class="login transition position-absolute">
-                <a href="index.html" class="btn border-0 transition btn-primary createSite">Create Free Site</a>
-            </div>
-            
-        </div>
-    </header>
-<!-- </div> -->
+<header class="position-fixed w-100" id="header">
+	<div class="container position-relative">
+		<nav class="navbar navbar-expand-lg navbar-dark w-100">
+		  	<div class="container position-relative justify-content-md-end justify-content-sm-between align-items-sm-center">
+			    <a class="navbar-brand my-auto" href="index.html">
+					<div class="d-md-none d-block">
+						<img src="images/logo1.png" class="img-fluid" alt="">
+					</div>
+					<div class="navbar-brand-img d-md-block d-none">
+						<img src="images/logo.png" class="img-fluid" alt="">
+					</div>
+			    </a>
+			  	<button class="navbar-toggler toggle transition" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+			    	<span></span>
+					<span></span>
+					<span></span>
+			  	</button>
+		    	<div class="collapse navbar-collapse flex-md-column" id="navbarCollapse">
+			        <ul class="navbar-nav ms-auto navbar-light">
+			          	<li class="nav-item">
+			            	<a class="nav-link" href="index.html">Home</a>
+			          	</li>
+			          	<li class="nav-item">
+			            	<a class="nav-link" href="dotnet-core.html">ASP.NET Core</a>
+			          	</li>
+			          	<li class="nav-item">
+							<a class="nav-link" href="blazor.html">Blazor</a>
+					    </li>
+					    <li class="nav-item">
+							<a class="nav-link" href="#">React</a>
+					    </li>
+			          	
+			          	<li class="nav-item">
+			          		<a class="nav-link">Angular</a>
+					    </li>
+						
+			          	<li class="nav-item">
+			            	<a class="nav-link" href="#">Vue</a>
+			          	</li>	
+					    <li class="nav-item">
+			            	<a class="nav-link" href="#">Contact</a>
+			          	</li>
+			        </ul>
+		    	</div>
+		    </div>
+		</nav>
 
-<div class="sidebar_area blazor_page">
+		<div class="login transition position-absolute">
+			<a class="toggle" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">Login</a>
+			<!--<div class="toggle"><a class="btn" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+    Login
+  </a></div>-->
+	
+			<div class="collapse" id="collapseExample">
+				<div class="card card-body">
+					<div class="mb-2 text-center"><img src="images/logo.png" class="loglogo" alt=""></div>
+					<form>
+					  <div class="mb-2">
+						<input class="form-control" type="text" placeholder="Enter Username">
+					  </div>						
+					  <div class="mb-1">
+						<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+					  </div>
+					  <div class="mb-3">
+						<label class=""><a href="#">Forgot Password?</a></label>
+					  </div>
+					  <button type="submit" class="btn btn-primary w-100">LOGIN</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</header>
+
+<!--
+:::::Banner Section
+-->
+<div class="bannerSec sp-bottom position-relative">
+	<div class="leftBg position-absolute"></div>
+	<img src="images/banner-bg.jpg" class="img-fluid position-absolute" alt="">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-3">
-				<div class="left_nav">
-					<ul>
-						<li><a class="active" href="blazor.html"> <i class="bi bi-layout-text-window-reverse"></i>what-is-dot-net-core</a></li>
-					</ul>
+			<div class="col-md-6 position-relative">
+				<h1 class="text-white position-relative">Build and launch <strong>your Cutting-edge <span>ASP.NET</span> Projects today!</strong></h1>
+				<ul class="position-relative">
+					<li class="text-white position-relative">Always Free .NET Hosting Your Online Home, Forever!</li>
+					<li class="text-white position-relative">User Friendly Control Panel</li>
+					<li class="text-white position-relative">Host your favorite Front-end Frameworks and Librariese</li>
+					<li class="text-white position-relative">Blazor, React, Angular, Vue.js</li>
+					<li class="text-white position-relative">Microsoft SQL Server 2022</li>
+				</ul>
+			</div>
+			<div class="col-md-6 position-relative">
+				<img src="images/banner-bg.jpg" class="img-fluid position-absolute w-100" alt="">
+				<div class="ads position-absolute">
+					<img src="images/ad.jpg" class="img-fluid w-100" alt="">
 				</div>
+				<div class="formBox position-relative">
+					<h2>Create Your Free Site</h2>
+					<form>
+						<input class="bg-white font-weight-light border-0" type="text" placeholder="Enter Username">
+						<input class="bg-white font-weight-light border-0" type="email" placeholder="Enter Email">
+						<input class="bg-white font-weight-light border-0" type="password" placeholder="Enter Password">
+						<p class="font-weight-light">By signing up with our service you agree to our <a href="#" class="transition">Terms & Conditions</a>.</p>
+						<button type="submit" class="btn btn-primary border-0 text-center w-100 transition">Create Site</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--
+:::::Discover Section
+-->
+<div class="discover_area">
+	<div class="container">
+		<h1>Discover why we're the ideal choice <br>
+for your <span>hosting needs.</span></h1>
+Experience the Best Hosting Solutions with Us!
+		<div class="box_area">
+			<div class="row">
+				<div class="col-lg-3 col-md-6">
+					<div class="box">
+						<div class="box_icon orange_cir"><img src="images/i1.png" class="img-fluid" alt=""></div>
+						<h3>Own .NET CORE <br>
+	Hosting Environment</h3>
+							We use cloud solutions to host our customer's ASP.NET Core applications. Our in-house support team takes care of the hosting, which assures our customers of performance and security for their DOT NET Core hosting and SQL Server databases.
+					</div>					
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="box">
+						<div class="box_icon peach_cir"><img src="images/i2.png" class="img-fluid" alt=""></div>
+						<h3>Latest Technology <br>
+Stack</h3>
+							We are on top of the latest Tech Stack and knowledgeable in providing support for various applications such as ASP.NET Core, Blazor, React, Angular, Vue.js, MS SQL Server 2022 databases, Our own Custom Control Panel, and Windows Server. Our services are reliable and top-tier.
+					</div>					
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="box">
+						<div class="box_icon flesh_cir"><img src="images/i3.png" class="img-fluid" alt=""></div>
+						<h3>Experience .NET Core <br>
+Excellence for Free!</h3>
+							Experience blazing-fast .NET Core hosting for free. Dive into our seamless, robust platform designed for optimal performance. Whether you're a novice learning ASP.NET Core, a seasoned professional .NET Core developer, or a savvy business owner, you'll all reap equal benefits. 
+					</div>					
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="box">
+						<div class="box_icon yellow_cir"><img src="images/i4.png" class="img-fluid" alt=""></div>
+						<h3>MS SQL Server At<br> 
+No Cost</h3>
+							Unlock the power of Microsoft SQL Server for your business with our free database hosting service! Enjoy reliable, high-performance hosting for your SQL Server databases connected to ASP.NET Core application, complete with secure access and expert support. Take your data management to the next 
+level today!
+					</div>					
+				</div>
+			</div>
 			
-			</div>
-			<div class="col-lg-9 srt">
-				<div class="pb-4">
-					<h1>What is .NET Core: A Quick Overview</h1>
-                    <h1>What is .NET Core?</h1>
-					<div class="clearfix">
-						<img src="images/ang-1.png" class="img-fluid" alt="">
-						<p>.NET Core is an open-source, cross-platform general-purpose development platform designed to be lightweight, modular, and versatile.(<a href="https://github.com/dotnet" target="_blank">GitHub</a>)</p>
-                        <p>.NET Core was first announced by Microsoft in 2014 as a redesigned, open-source, and cross-platform successor to .NET Framework. The first version,</p>
-                        <p>.NET Core 1.0, was released in 2016. Major versions since then include .NET Core 2.0 in 2017, .NET Core 3.0 in 2019, and in 2020 it was released as .NET (omitted the word “Core”) with version .NET 5. Current version is .NET 7 and the upcoming .NET 8 is scheduled to be released in November 2023.</p>
-                        <p>The goal of .NET Core was to create a .NET platform optimized for modern cloud workloads. By re-implementing .NET Runtime and Framework as open source, Microsoft aimed to make .NET cross-platform and open for contribution from the developer community.</p>
-                        <p>The <a href="https://dotnetfoundation.org/" target="_blank">.NET Foundation</a>, established by Microsoft on March 31, 2014, aims to enhance open-source development and foster collaboration within the .NET ecosystem.
-
-                        </p>
-
-
-					</div>
-				</div>
-				
-			</div>
 		</div>
-		
-	
-		
-		
-		<div class="row">
-		<div class="col-md-4 col-sm-12 col-g-4 ">
-		  <div class="blazor_box ">
-		    <img src="images/ang-2.jpg"/>
-			<h3>What is .NET Core used for:</h3>
-            <ul class="list-img">
-                <li class="">Web apps: .NET Core is a great choice for building web applications, using ASP.NET Core.</li>
-                <li class="">Web APIs: For building RESTful services.</li>
-                <li class="">Microservices: .NET Core is a great choice for building microservices, which are small, independent services that can be used to create larger distributed systems.</li>
-                <li class="">Console apps: Utility apps and command-line tools. .NET Core can be used to build console applications, which are command-line applications that can be run from the command prompt.</li>
-                <li class="">Desktop apps: Using WinUI (for Windows only) and .NET MAUI (cross-platform) we can build stunning desktop applications.</li>
-                <li class="">Mobile apps: .NET Core can be used to build mobile applications using Xamarin and MAUI, which allows developers to share code with iOS, Android, and Windows platforms.</li>
-                <li class="">Machine learning: Using the ML.NET framework, we can build and train custom machine learning models.</li>
-                <li class="">Cloud-native apps: Taking advantage of containers and orchestrators like Kubernetes.</li>
-                <li class="">IoT apps: Running on small-footprint devices like Raspberry Pi. .NET Core can be used to build IoT applications, including applications that run on embedded devices and sensors.</li>
-                <li class="">Games: We can also use .NET Core to build games using the Unity game engine.</li>
-            </ul>
-		  </div>
-		</div>
-		<div class="col-md-4 col-sm-12">
-		   <div class="blazor_box">
-		    <img src="images/ang-3.jpg"/>
-			<h3>What is .NET Core vs .NET Framework?</h3>
-            
-            <p class="all-p">.NET Core and .NET Framework are both development platforms from Microsoft, but they differ in several key aspects. While .NET Core is cross-platform and runs on Windows, Linux, and macOS, .NET Framework is limited to Windows. In terms of accessibility, .NET Core is open source, allowing developers to contribute and inspect its codebase, but the .NET Framework remains proprietary.</p>
-            <p class="all-p">.NET Core boasts enhanced startup times and optimized resource utilization, particularly suited for cloud-based applications. Additionally, not all APIs from the .NET Framework are available in .NET Core, though Microsoft is progressively porting them over.</p>
-            <p class="all-p">.NET Core apps benefit from a modular approach using NuGet packages, often resulting in smaller application footprints, while .NET Framework applications depend on a system-wide installer (can also use NuGet for additional features). In essence, .NET Core represents a forward-thinking evolution from .NET Framework, crafted with modern application architectures in mind, such as cloud computing and microservices, whereas .NET Framework remains vital for legacy Windows-only applications.</p>
-		  </div>
-		</div>
-		<div class="col-md-4 col-sm-12">
-			<div class="blazor_box">
-		    <img src="images/ang-6.png"/>
-			<h3>What is Dapper in .NET Core?</h3>
-            <p class="all-p">Dapper (a micro ORM) is a popular open-source library for .NET that simplifies the process of working with databases. It was created by Sam Saffron (a senior software engineer at Stack Overflow) in 2011.</p>
-                    <p class="all-p">Dapper allows developers to write database queries using a simple, SQL-like syntax, and it provides a way to execute those queries against various databases, including SQL Server, MySQL, PostgreSQL, and Oracle.</p>
-                    <p class="all-p">It is available as a NuGet package. Dapper is often used in .NET Core applications to simplify data access and reduce the amount of code required to interact with databases.</p>
-		 </div>
-		</div>
-	  </div>
-		
-		
 	</div>
 </div>
 
-<div class="code_area blazor_code">
+<!--
+:::::Net Section
+-->
+<div class="net_area">
 	<div class="container">
-		<h2>What is Dependency Injection in .NET Core?</h2>
-        <p> Dependency injection is a technique that allows components to be loosely coupled, making it easier to test, maintain, and extend the system. Instead of having classes create their own dependencies or directly reference them, the dependencies are "injected" into the classes that require them.</p> 
-        <p>In .NET Core, dependency injection is built into the framework, making it easy to use and integrate into applications.</p>
-        <h2>What is IoC container in .NET Core?</h2>
-        <p>An IoC (Inversion of Control) Container in .NET Core is a component used for dependency injection. It manages object creation and resolves dependencies automatically. When an application is started, dependencies are registered with the container. During runtime, the container provides instances of these dependencies when requested. This promotes loose coupling, making code more modular and testable. .NET Core includes a built-in IOC container but can also integrate with third-party containers.</p>
-        <p>In .NET Core, Microsoft's default IoC container is available through the IServiceProvider interface. It is lightweight, fast, and supports common scenarios.</p>
-        <p>For more complex scenarios, third-party containers like Autofac can be used by implementing the same interface.</p>
-        <h2>What is Kestrel in .NET Core?</h2>
-        <p>Kestrel is a web server for .NET Core, designed to be fast, efficient, and secure. It is a drop-in replacement for the traditional IIS web server and can be used to host web applications, APIs, and microservices. It is optimized for high performance and is Cross-platform, open-source available on <a href="https://github.com/dotnet/aspnetcore/tree/main/src/Servers/Kestrel" target="_blank">GitHub</a>.</p>
-		<p>Kestrel supports all the latest web features like WebSocket support which can be used to build real-time web apps with ASP.NET Core and .NET Core.</p>
-       
-		<!-- ********************** -->
-		
-       
-
-
-		<div class="mt-3 pt-3 clearfix">
-			<h1>Summary</h1>
-			<img src="images/ang-8.png" class="img-fluid" alt="">
-            <p>.NET Core is a versatile framework that we can use to build wide range of applications. It provides a number of benefits over the traditional .NET Framework, including better performance, cross-platform compatibility, and a more modular design.</p>
-            <p>Developers can use Dapper to simplify data access, dependency injection to loosely couple components, and the built-in IoC container to manage dependencies. Kestrel is a fast and efficient web server that is used to host web applications and APIs.</p>
-            <p>.NET Core is a popular choice for building modern web applications and microservices and is well-suited for building scalable, high-performance applications that can run on a variety of platforms.</p>
+		<div class="row align-items-center">
+			<div class="col-md-6">
+				<div class="netleft">
+					<h1><strong>.NET <span>Core</span></strong> an Overview</h1>
+					<ul class="mb-0">
+						<li>Imagine a toolbox, filled with versatile tools that let you craft almost anything. In the digital world, you've got .NET Core.</li>
+						<li>.NET Core is an open-source, cross-platform framework from Microsoft. Unlike its predecessor, the .NET Framework, which was limited to Windows, .NET Core can run on Windows, macOS, and Linux.</li>
+						<li>And that's just scratching the surface. With its flexibility, community support, and Microsoft's backing, .NET Core is a solid choice for modern-day developers. Dive in, and you might find it's the toolbox you've been looking for.</li>
+					</ul>
+					<div id="more1" class="more"><a data-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample1">Show More</a></div>
+					<div class="collapse" id="collapseExample1">
+					  <div class="card card-body p-0 bg-transparent border-0">
+						<ul class="mt-0">
+							<li>With .NET Core, developers can build a wide range of applications, including:
+								<ul>
+								<li>Web Apps: With .NET Core, we can craft beautiful websites or complex web applications.</li>
+								<li>Mobile Apps: Whether it's for Android or iOS.</li>
+								<li>Desktop Apps: Traditional software for your computer with modern UI with the help of .NET Core.</li>
+								<li>Cloud Services: Scale your apps for millions using cloud platforms.</li>
+								<li>Microservices: Small, independent services that work together.</li>
+								<li>Games: Yes, even fun and engaging games are possible with .NET Core.</li>
+								<li>IoT: Bring even home appliances online. And many other electronics.</li>
+								</ul>
+							</li>
+						</ul>
+					  </div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 text-center">
+				<img src="images/net_pic.jpg" class="img-fluid" alt="">
+			</div>
 		</div>
-		
-		
+	</div>
+</div>
+<!--
+:::::AD Section
+-->
+<div class="AD_area pt-4 pb-4 mt-4">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<img src="images/weare.jpg" class="img-fluid w-100" alt="">
+			</div>
+		</div>
+	</div>
+</div>
+<!--
+:::::VS Section
+-->
+<div class="vs_area">
+	<div class="container">
+		<h1><strong>.NET <span>Core</span></strong> vs <strong>.NET <span>framework</span></strong></h1>
+		The .NET ecosystem has two major players: .NET Core and .NET Framework. Understanding their differences is a must <br>when deciding which to use for a project.
+		<div class="vsin">
+		<div class="row ">
+			<div class="col-sm-6">
+				<div class="purplebox">
+					<p>.NET Core is a modern, cross-platform, open-source framework designed to serve the evolvingneeds of developers.</p>
+				</div>
+			</div>
+
+			<div class="col-sm-6">
+				<div class="skybox">
+					<p>While .NET Framework is a tried-and-true framework that's been around for a while, .NET Framework is Windows-specific and has a rich set of features for developers familiar with the Windows ecosystem.</p>
+				</div>
+			</div>
+		</div>
+		<div class="row ">
+			<div class="col-sm-6">
+				<div class="purplebox">
+					<p>One of the primary differences lies in platform support. .NET Core thrives across Windows, macOS, and Linux while .NET Framework is tailored mainly for Windows.</p>
+				</div>
+			</div>
+
+			<div class="col-sm-6">
+				<div class="skybox">
+					<p>.NET Core often boasts better performance due to its optimized design. On the other hand, the .NET Framework offers stability, albeit sometimes without the latest performance tweaks.</p>
+				</div>
+			</div>
+		</div>
+		<div class="row ">
+			<div class="col-sm-6">
+				<div class="purplebox">
+					<p>.NET Core is modular, making it lightweight and flexible for diverse projects. In contrast, the .NET Framework provides more out-of-the-box functionality, reducing the initial setup time for certain applications.</p>
+				</div>
+			</div>
+
+			<div class="col-sm-6">
+				<div class="skybox">
+					<p>Your choice between .NET Core and .NET Framework should hinge on your project's requirements. Opt for .NET Core for a modern touch, cross-platform functionality, and heightened performance. Meanwhile, if your focus lies primarily on the Windows platform and you wish to make use of extensive pre-existing libraries, the .NET Framework is the way to go.</p>
+				</div>
+			</div>
+		</div>
+		</div>
+	</div>
+</div>
+<!--
+:::::asp Section
+-->
+<div class="asp_area">
+	<div class="container">		
+
+		<div class="row">
+			<div class="col-lg-6">	
+				<div class="d-lg-none d-block"><img src="images/bl_sec.jpg" class="img-fluid w-100" alt=""></div>
+			</div>
+
+			<div class="col-lg-6 p-4">
+				<div class="gray_sec">
+					<h1><strong>ASP.NET <span>Core</span></strong> and its Advantages</h1>
+					<ul>
+						<li>Imagine a ASP.NET Core is a cross-platform, open-source framework for creating web applications developed by Microsoft and is based on .NET Core. It is actually a revamped version of the classic ASP.NET framework but with many new features!</li>
+						<li>Another very usable feature of ASP.NET Core is that it's modular and flexible. Unlike the old ASP.NET framework, which was rather inflexible, ASP.NET Core is designed to be easily customizable. We can swap out different components and libraries as needed which makes it easier to build unique web applications. </li>
+						<li>ASP.NET Core also performs significantly better than the traditional ASP.NET as can handle more traffic and perform better. It also has many excellent security features built-in.</li>
+						<li>It is a good choice for building modern web applications. And you are 
+	at the right place to deploy and run the .NET Core application here!</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
 	</div>
 </div>
 
 <!--
 :::::accordian Section
 -->
-<div id="inj" class="acc_area pb-5 blazor_faq">
+<div class="acc_area">
 	<div class="container">		
-<h1 class="ang-faq">Frequently Asked Questions about What is .NET Core</h1>
+
 		<div class="row gx-5">
-			<div class="col-lg-6 sky_sec">
-				
-				<div class="accordion pt-0" id="accordionExample">
+			<div class="col-lg-6 pur_sec">
+				<h1 class="text-white mt-4 pt-3"><strong>ASP.NET Core</strong> Hosting FAQs</h1>
+				<div class="accordion" id="accordionExample">
 				  <div class="accordion-item">
-					<h2 class="accordion-header" id="headingOn">
-					  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne1" aria-expanded="true" aria-controls="collapseOne">
-						How to tell what version of .NET Core is installed?
+					<h2 class="accordion-header" id="headingOne">
+					  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+						How do I handle the deployment of ASP.NET Core 
+applications?
 					  </button>
 					</h2>
-					<div id="collapseOne1" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+					<div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
 					  <div class="accordion-body">
-						Run “dotnet --version” in the command line.
-                    					  </div>
+						You will utilize the custom-built control panel provided by our ASP.NET Core hosting service to deploy and manage your applications. Ensure you follow the panel's guidelines and documentation for seamless deployment.  
+					  </div>
 					</div>
 				  </div>
 				  <div class="accordion-item">
-					<h2 class="accordion-header" id="headingTwo35">
-					  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo35" aria-expanded="false" aria-controls="collapseTwo35">
-                        What is automapper in .NET Core?					  </button>
+					<h2 class="accordion-header" id="headingTwo">
+					  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+						Can I use my own custom domain name with my .NET Core application on this platform? 
+					  </button>
 					</h2>
-					<div id="collapseTwo35" class="accordion-collapse collapse" aria-labelledby="headingTwo35" data-bs-parent="#accordionExample">
+					<div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
 					  <div class="accordion-body">
-						AutoMapper is a library to map objects from one type to another, simplifying object-to-object mapping.				  </div>
+						Yes. 
+					  </div>
 					</div>
 				  </div>
-                  
+				  <div class="accordion-item">
+					<h2 class="accordion-header" id="headingThree">
+					  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+						Are there any e-commerce features or integrations available for .NET Core applications on this platform? 
+					  </button>
+					</h2>
+					<div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+					  <div class="accordion-body">
+						You are completely allowed to integrate any e-commerce solution of your choice, provided it is compatible with ASP.NET Core and SQL Server. 
+					  </div>
+					</div>
+				  </div>
+				  <div class="accordion-item">
+					<h2 class="accordion-header" id="headingFour">
+					  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+						Are there any limitations on the number of requests or traffic that my Dot NET Core application can handle per month? 
+					  </button>
+					</h2>
+					<div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+					  <div class="accordion-body">
+						No. Unless the traffic is non-human.  
+					  </div>
+					</div>
+				  </div>
+				  <div class="accordion-item">
+					<h2 class="accordion-header" id="headingFive">
+					  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+						How much disk space is provided with the free hosting plan of Dot NET Core? 
+					  </button>
+					</h2>
+					<div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+					  <div class="accordion-body">
+						5 GB. 
+					  </div>
+					</div>
+				  </div>
 				
-				  
-				   
-	
+				
+				<div id="more2" class="more mt-4"><a data-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample2">Show More</a></div>
+					<div class="collapse mt-3" id="collapseExample2">
+					  <div class="card card-body p-0 bg-transparent border-0">
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="headingSix">
+							  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+								Is there a limit on the number of concurrent connections or users? 
+							  </button>
+							</h2>
+							<div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+							  <div class="accordion-body">
+								No. Unless the connections are from non-humans. 
+							  </div>
+							</div>
+						  </div>
+						  <div class="accordion-item">
+							<h2 class="accordion-header" id="headingSeven">
+							  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+								Can I use Entity Framework Core in my .NET Core application hosted here? 
+							  </button>
+							</h2>
+							<div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
+							  <div class="accordion-body">
+								Yes. You can use any compatible version of EF Core with your ASP.NET Core application hosted here. 
+							  </div>
+							</div>
+						  </div>
+						   <div class="accordion-item">
+							<h2 class="accordion-header" id="headingEight">
+							  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+								Which versions of ASP.NET Core do you support? 
+							  </button>
+							</h2>
+							<div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#accordionExample">
+							  <div class="accordion-body">
+								.NET 6, .NET 7, .NET 8.  
+							  </div>
+							</div>
+						  </div>
+						  <div class="accordion-item">
+							<h2 class="accordion-header" id="headingNine">
+							  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+								Are there any features or modules restricted in the free tier of ASP.NET Core? 
+							  </button>
+							</h2>
+							<div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#accordionExample">
+							  <div class="accordion-body">
+								You can use all default framework features and any trusted module or library.  
+							  </div>
+							</div>
+						  </div>
+						  <div class="accordion-item">
+							<h2 class="accordion-header" id="headingTen">
+							  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+								Is there a control panel or dashboard available for managing the .NET Core application? 
+							  </button>
+							</h2>
+							<div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen" data-bs-parent="#accordionExample">
+							  <div class="accordion-body">
+								Yes.  
+							  </div>
+							</div>
+						  </div>
+						  <div class="accordion-item">
+							<h2 class="accordion-header" id="headingEleven">
+							  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+								How can I monitor my Dot NET Core application's performance and errors? 
+							  </button>
+							</h2>
+							<div id="collapseEleven" class="accordion-collapse collapse" aria-labelledby="headingEleven" data-bs-parent="#accordionExample">
+							  <div class="accordion-body">
+								You can use any trusted third-party package with your .NET Core application for Error Tracking and Performance Monitoring.  
+							  </div>
+							</div>
+						  </div>
+						  <div class="accordion-item">
+							<h2 class="accordion-header" id="headingTwelve">
+							  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">
+								Do you offer free database hosting? If so, which databases are supported? 
+							  </button>
+							</h2>
+							<div id="collapseTwelve" class="accordion-collapse collapse" aria-labelledby="headingTwelve" data-bs-parent="#accordionExample">
+							  <div class="accordion-body">
+								Yes. Microsoft SQL Server 2022 is supported.  
+							  </div>
+							</div>
+						  </div>
+						  <div class="accordion-item">
+							<h2 class="accordion-header" id="headingThirteen">
+							  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThirteen" aria-expanded="false" aria-controls="collapseThirteen">
+								Where can I download the latest .NET and ASP.NET Core updates? 
+							  </button>
+							</h2>
+							<div id="collapseThirteen" class="accordion-collapse collapse" aria-labelledby="headingThirteen" data-bs-parent="#accordionExample">
+							  <div class="accordion-body">
+								To start the development of .NET applications, it is necessary to download and install .NET SDK and Runtime (Software Development Kit). You can use the following official link to download the .NET SDK's and Runtimes version of your choice. <a href="https://dotnet.microsoft.com/en-us/download/dotnet" target="_blank">.NET download</a>
+							  </div>
+							</div>
+						  </div>
+					  </div>
+					  </div>
 					</div>
 			</div>
 
-			<div id="rt" class="col-lg-6 sky_sec">
+			<div class="col-lg-6 sky_sec">
+				<h1 class="text-white mt-4 pt-3"><strong>.NET Core</strong> & <strong>ASP.NET Core</strong> FAQs</h1>
+				
+				
+				
+				
 				  
-				<div class="accordion pt-0" id="accordionExample1">
+				  
+				  
+				  
+				<div class="accordion" id="accordionExample1">
 				  <div class="accordion-item">
 					<h2 class="accordion-header" id="headingOne1">
-					  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneone" aria-expanded="true" aria-controls="collapseOne1">
-						What is ilogger in .NET Core?
+					  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne1" aria-expanded="true" aria-controls="collapseOne1">
+						What is .NET Core? 
 					  </button>
 					</h2>
-					<div id="collapseOneone" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample1">
+					<div id="collapseOne1" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample1">
 					  <div class="accordion-body">
-						ILogger is an interface for logging messages in .NET Core, offering a consistent way to log throughout your application.					  </div>
+						.NET Core is a cross-platform and open-source application development framework from Microsoft. 
+					  </div>
 					</div>
 				  </div>
 				  <div class="accordion-item">
 					<h2 class="accordion-header" id="headingTwo1">
 					  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo1" aria-expanded="false" aria-controls="collapseTwo1">
-						What is .NET Core CLI?					  </button>
+						What is .NET Core used for? 
+					  </button>
 					</h2>
 					<div id="collapseTwo1" class="accordion-collapse collapse" aria-labelledby="headingTwo1" data-bs-parent="#accordionExample1">
 					  <div class="accordion-body">
-						.NET Core CLI is a set of tools for developing, building, and running .NET Core applications from the command line.				  </div>
-					</div>
-				  </div>
-				  
-				  
-				 
-				
-
-				
-					</div>
-			</div>
-		</div>
-
-	</div>
-</div>
-
-<div id="inj" class="acc_area pb-5 blazor_faq">
-	<div class="container">		
-<h1 class="ang-faq">People also ask about What is .NET Core</h1>
-		<div class="row gx-5">
-			<div class="col-lg-6 sky_sec">
-				
-				<div class="accordion pt-0" id="accordionExample">
-				  <div class="accordion-item">
-					<h2 class="accordion-header" id="headingOnes2">
-					  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOnes2" aria-expanded="false" aria-controls="collapseOnes2">
-						What is .NET Core runtime?
-					  </button>
-					</h2>
-					<div id="collapseOnes2" class="accordion-collapse collapse " aria-labelledby="headingOnes2" data-bs-parent="#accordionExample">
-					  <div class="accordion-body">
-						.NET Core Runtime is the environment where .NET Core applications are executed. It includes just the resources needed to run existing apps.					  </div>
+						.NET Core is used for building web, desktop, mobile, IoT, cloud, and microservices applications. 
+					  </div>
 					</div>
 				  </div>
 				  <div class="accordion-item">
-					<h2 class="accordion-header" id="headingTwos2">
-					  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwos2" aria-expanded="false" aria-controls="collapseTwos2">
-                        What is .NET Core SDK?
+					<h2 class="accordion-header" id="headingThree1">
+					  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree1" aria-expanded="false" aria-controls="collapseThree1">
+						What is the difference between .NET and .NET Core? 
 					  </button>
 					</h2>
-					<div id="collapseTwos2" class="accordion-collapse collapse" aria-labelledby="headingTwos2" data-bs-parent="#accordionExample">
+					<div id="collapseThree1" class="accordion-collapse collapse" aria-labelledby="headingThree1" data-bs-parent="#accordionExample1">
 					  <div class="accordion-body">
-						.NET Core SDK (Software Development Kit) includes everything needed to develop .NET Core applications, including the runtime, libraries, and CLI tools.					  </div>
+						.NET was formerly .NET Core, while .NET Framework is a Windows-only framework. .NET Core (now renamed to just .NET + version number like .NET 7, .NET 8) is cross-platform (Windows, Linux, macOS). 
+					  </div>
+					</div>
+				  </div>
+				  <div class="accordion-item">
+					<h2 class="accordion-header" id="headingThree11">
+					  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree11" aria-expanded="false" aria-controls="collapseThree11">
+						Is .NET Core the same as C#? 
+					  </button>
+					</h2>
+					<div id="collapseThree11" class="accordion-collapse collapse" aria-labelledby="headingThree11" data-bs-parent="#accordionExample11">
+					  <div class="accordion-body">
+						No, .NET Core is a framework and runtime environment, while C# is a programming language used within that framework. You can use C# to write code for .NET Core applications. 
+					  </div>
+					</div>
+				  </div>
+				  <div class="accordion-item">
+					<h2 class="accordion-header" id="headingThree111">
+					  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree111" aria-expanded="false" aria-controls="collapseThree111">
+						Is .NET Core backend or frontend? 
+					  </button>
+					</h2>
+					<div id="collapseThree111" class="accordion-collapse collapse" aria-labelledby="headingThree111" data-bs-parent="#accordionExample1">
+					  <div class="accordion-body">
+						While .NET Core is primarily used for backend framework. It can be used for both backend and frontend development (using Blazor). It is a popular choice for building enterprise web applications, microservices (using ASP.NET Core), and desktop applications. 
+					  </div>
 					</div>
 				  </div>
 
-				   
+				<div id="more3" class="more mt-4"><a data-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample3">Show More</a></div>
+					<div class="collapse mt-3" id="collapseExample3">
+					  <div class="card card-body p-0 bg-transparent border-0">
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="heading6">
+							  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+								What is ASP.NET Core?  
+							  </button>
+							</h2>
+							<div id="collapse6" class="accordion-collapse collapse" aria-labelledby="heading6" data-bs-parent="#accordionExample1">
+							  <div class="accordion-body">
+								ASP.NET Core is a cross-platform, open-source, and high-performance framework for building modern web apps and services.  
+							  </div>
+							</div>
+						  </div>
+						  <div class="accordion-item">
+							<h2 class="accordion-header" id="heading7">
+							  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
+								Is there a difference between ASP.NET and .NET Core?  
+							  </button>
+							</h2>
+							<div id="collapse7" class="accordion-collapse collapse" aria-labelledby="heading7" data-bs-parent="#accordionExample1">
+							  <div class="accordion-body">
+								Yes, ASP.NET is a web framework under .NET Core, while .NET Core is a cross-platform framework that includes ASP.NET Core for web development.  
+							  </div>
+							</div>
+						  </div>
+						  <div class="accordion-item">
+							<h2 class="accordion-header" id="heading8">
+							  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
+								Is ASP.NET Core full stack?  
+							  </button>
+							</h2>
+							<div id="collapse8" class="accordion-collapse collapse" aria-labelledby="heading8" data-bs-parent="#accordionExample1">
+							  <div class="accordion-body">
+								Yes, ASP.NET Core can be used for full-stack development, handling both backend logic and frontend views.   
+							  </div>
+							</div>
+						  </div>
+						  <div class="accordion-item">
+							<h2 class="accordion-header" id="heading9">
+							  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse9" aria-expanded="false" aria-controls="collapse9">
+								What do I need to learn ASP.NET Core? 
+							  </button>
+							</h2>
+							<div id="collapse9" class="accordion-collapse collapse" aria-labelledby="heading9" data-bs-parent="#accordionExample1">
+							  <div class="accordion-body">
+								You'll need a foundational knowledge of C# and basic web development concepts to start with ASP.NET Core.    
+							  </div>
+							</div>
+						  </div>
+						  <div class="accordion-item">
+							<h2 class="accordion-header" id="heading10">
+							  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse10" aria-expanded="false" aria-controls="collapse10">
+								Could not locate .NET Core project. Assets were not generated. 
+							  </button>
+							</h2>
+							<div id="collapse10" class="accordion-collapse collapse" aria-labelledby="heading10" data-bs-parent="#accordionExample1">
+							  <div class="accordion-body">
+								The error message means that Visual Studio Code could not find a .NET Core project in the current folder. This can happen for various reasons. Sometimes restarting VS Code fixes this error.     
+							  </div>
+							</div>
+						  </div>
+						  <div class="accordion-item">
+							<h2 class="accordion-header" id="headingE1">
+							  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseE1" aria-expanded="false" aria-controls="collapseE1">
+								How to check .NET Core version?  
+							  </button>
+							</h2>
+							<div id="collapseE1" class="accordion-collapse collapse" aria-labelledby="headingE1" data-bs-parent="#accordionExample1">
+							  <div class="accordion-body">
+								Open a command prompt and run the following command: dotnet --version    
+							  </div>
+							</div>
+						  </div>
+						  <div class="accordion-item">
+							<h2 class="accordion-header" id="heading12">
+							  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse12" aria-expanded="false" aria-controls="collapse12">
+								Can ASP.NET Core run on Linux?  
+							  </button>
+							</h2>
+							<div id="collapse12" class="accordion-collapse collapse" aria-labelledby="heading12" data-bs-parent="#accordionExample1">
+							  <div class="accordion-body">
+								Yes.    
+							  </div>
+							</div>
+						  </div>
+						  <div class="accordion-item">
+							<h2 class="accordion-header" id="heading13">
+							  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse13" aria-expanded="false" aria-controls="collapse13">
+								What is the startup class in ASP.NET Core?  
+							  </button>
+							</h2>
+							<div id="collapse13" class="accordion-collapse collapse" aria-labelledby="heading13" data-bs-parent="#accordionExample1">
+							  <div class="accordion-body">
+								In ASP.NET Core, the startup class contains the configuration code for the application. It is typically named Startup.cs and you can find it in the root directory of the project.    
+							  </div>
+							</div>
+						  </div>
 	
-					</div>
-			</div>
-
-			<div id="rt" class="col-lg-6 sky_sec">
-				  
-				<div class="accordion pt-0" id="accordionExample1">
-				  <div class="accordion-item">
-					<h2 class="accordion-header" id="headingOne1s2">
-					  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneones2" aria-expanded="true" aria-controls="collapseOne1s2">
-						What is middleware .NET Core?
-					  </button>
-					</h2>
-					<div id="collapseOneones2" class="accordion-collapse collapse" aria-labelledby="headingOnes2" data-bs-parent="#accordionExample1">
-					  <div class="accordion-body">
-						Middleware in .NET Core are components that handle requests and responses, forming a pipeline between the server and application.					  </div>
-					</div>
-				  </div>
-				  <div class="accordion-item">
-					<h2 class="accordion-header" id="headingTwo1s2">
-					  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo1s2" aria-expanded="false" aria-controls="collapseTwo1s2">
-						What is SignalR .NET Core?					  </button>
-					</h2>
-					<div id="collapseTwo1s2" class="accordion-collapse collapse" aria-labelledby="headingTwo1s2" data-bs-parent="#accordionExample1">
-					  <div class="accordion-body">
-						SignalR in .NET Core is a library that enables real-time web functionality, allowing server-side code to push content to clients instantly.					  </div>
-					</div>
-				  </div>
-				  <!-- <div class="accordion-item">
-					<h2 class="accordion-header" id="headingTwo22">
-					  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo22" aria-expanded="false" aria-controls="collapseTwo22">
-						Is Angular better than React?					  </button>
-					</h2>
-					<div id="collapseTwo22" class="accordion-collapse collapse" aria-labelledby="headingTwo22" data-bs-parent="#accordionExample1">
-					  <div class="accordion-body">
-						The choice between Angular and React depends on the project's requirements and developer preferences. Both have strengths, and the better choice varies based on the specific context.					  </div>
-					</div>
-				  </div> -->
-				  
-				 
-				
-
-				
+					  </div>
+					  </div>
 					</div>
 			</div>
 		</div>
